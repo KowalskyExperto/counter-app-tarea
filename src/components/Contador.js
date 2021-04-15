@@ -11,16 +11,16 @@ export const Contador = ({initialState=10,cambio=1}) => {
     },['numero']);
 
     const {numero} = formValues;
+
     useEffect(() => {
         console.log('Numero Cambio');
         if(numero){
             setd(parseInt(numero));
         }
-    }, [numero])
+    }, [numero,setd])
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(formValues);
     }
     
     return (
