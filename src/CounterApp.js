@@ -21,19 +21,19 @@ export const CounterApp = ({initialState=10,cambio=1}) => {
     
     return (
         <>
-        <div>
-            <h1>Contador</h1>
-            <h1>{state}</h1>
-            <button onClick={() => increment((numero) ? parseInt(numero):0)}>+{numero}</button>
-            <button onClick={() => reset()}> Reset </button>
-            <button onClick={() => decrement((numero) ? parseInt(numero):0)}>-{numero}</button>
-        </div>
-        <div>
+        <div className='cube'>
             <h1>Cambio</h1>
-            <h1>{(numero) ? numero:'Escriba algún numero'}</h1>
+            <h2>{(numero) ? numero:'Escriba algún numero'}</h2>
             <form onSubmit={handleSubmit}>
                 <input type='number' name='numero' value={numero} onChange={handleInputChange}/>
             </form>
+        </div>
+        <div className='cube'>
+            <h1>Contador</h1>
+            <h2>{state}</h2>
+            <button onClick={() => increment((numero) ? parseInt(numero):0)}>+{numero}</button>
+            <button onClick={() => reset()}> Reset </button>
+            <button onClick={() => decrement((numero) ? parseInt(numero):0)}>-{numero}</button>
         </div>
         </>
     );
